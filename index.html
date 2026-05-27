@@ -506,7 +506,7 @@ pre::-webkit-scrollbar-thumb, .diagram::-webkit-scrollbar-thumb {
     <a href="#" class="logo" onclick="showTab('overview', event)">
       <span class="logo-mark">P</span>
       plivo-mirror
-      <span class="version-tag">v0.1.0a2</span>
+      <span class="version-tag">v0.1.0</span>
     </a>
     <nav>
       <button data-tab="overview"     class="active" onclick="showTab('overview', event)">Overview</button>
@@ -620,7 +620,7 @@ reason=<span class="str">"Policy 1 violated: agent is confirming a refund</span>
 
 <span class="cmt"># Verify</span>
 <span class="prompt">$</span> python -c <span class="str">"import plivo_mirror; print(plivo_mirror.__version__)"</span>
-0.1.0a1</code></pre>
+0.1.0</code></pre>
 
   <h3>2. Detection-only API (pure function, no audio side effects)</h3>
 <pre><code><span class="kw">from</span> plivo_mirror <span class="kw">import</span> Supervisor, MirrorConfig
@@ -910,7 +910,7 @@ the money will be back in 5-7 business days.
       <h4>Install plivo-mirror</h4>
 <pre><code><span class="prompt">$</span> pip install plivo-mirror[openai,plivo]
 <span class="prompt">$</span> python -c <span class="str">"import plivo_mirror; print(plivo_mirror.__version__)"</span>
-0.1.0a1</code></pre>
+0.1.0</code></pre>
     </li>
 
     <li>
@@ -1161,7 +1161,6 @@ reason=<span class="str">"Policy 1 violated: refund must transfer to human super
     <tr><td><code>tool_gate_enabled</code></td><td><code>True</code></td><td>Inspect tool calls before they fire.</td></tr>
     <tr><td><code>irreversible_tools</code></td><td>see below</td><td>Tool names that ALWAYS go through the gate, regardless of <code>tool_gate_enabled</code>.</td></tr>
     <tr><td><code>buffer_text</code></td><td>"Sorry, let me make sure..."</td><td>Played while the correction is generated.</td></tr>
-    <tr><td><code>correction_strategy</code></td><td><code>"self_correct"</code></td><td>Or <code>"handoff"</code>.</td></tr>
     <tr><td><code>tenant_id</code></td><td><code>None</code></td><td>v2 seam — threaded through <code>SupervisorContext</code>.</td></tr>
     <tr><td><code>secrets</code></td><td><code>None</code></td><td>Optional secrets resolver callable.</td></tr>
   </table>
@@ -1204,7 +1203,7 @@ reason=<span class="str">"Policy 1 violated: refund must transfer to human super
   <h2 style="margin-top: 0;">Reports &amp; Fix-as-PR</h2>
   <p>Mirror doesn't just catch mistakes — it explains them and proposes fixes. When a call ends with one or more interventions, plivo-mirror generates a structured <strong>FailureReport</strong> and persists it. You review the reports via CLI and approve a fix that opens a real <strong>GitHub pull request</strong> against your agent's code.</p>
 
-  <div class="callout"><strong>v0.1.0a2 — new in this release.</strong> Reports + Fix-as-PR pipeline.</div>
+  <div class="callout"><strong>v0.1.0 — first stable release.</strong> Reports + Fix-as-PR pipeline included.</div>
 
   <h2>The flow</h2>
   <div class="diagram">  call ends with interventions
@@ -1491,7 +1490,7 @@ supervisor = <span class="fn">Supervisor</span>(
 </div> <!-- /wrap -->
 
 <footer>
-  <strong>plivo-mirror</strong> v0.1.0a2 · Apache-2.0 · Built for the Plivo voice-agent ecosystem.
+  <strong>plivo-mirror</strong> v0.1.0 · Apache-2.0 · Built for the Plivo voice-agent ecosystem.
 </footer>
 
 <script>
